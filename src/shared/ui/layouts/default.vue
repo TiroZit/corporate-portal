@@ -3,9 +3,13 @@ import Container from '@/shared/ui/Container';
 </script>
 
 <template>
-	<v-app>
-		<Container>
-			<slot />
-		</Container>
-	</v-app>
+	<q-layout view="hHr LpR lFf">
+		<q-page-container>
+			<Container>
+				<q-page>
+					<slot />
+				</q-page>
+			</Container>
+		</q-page-container>
+	</q-layout>
 </template>

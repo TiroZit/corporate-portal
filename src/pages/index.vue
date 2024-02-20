@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const route = useRoute();
 </script>
 
 <template>
-	<v-btn color="primary">
-		text
-	</v-btn>
+	<QBtn
+		disable
+		size="md"
+		color="teal-10"
+		label="Button Label"
+	/>
 </template>
