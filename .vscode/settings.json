@@ -200,5 +200,32 @@
 		"tabindex",
 		"style"
 	],
-	"compile-hero.disable-compile-files-on-did-save-code": false
+	"compile-hero.disable-compile-files-on-did-save-code": false,
+	"favorites.resources": [
+		{
+			"filePath": "src/app",
+			"group": "Default"
+		},
+		{
+			"filePath": "src/pages",
+			"group": "Default"
+		},
+		{
+			"filePath": "src/widgets",
+			"group": "Default"
+		},
+		{
+			"filePath": "src/features",
+			"group": "Default"
+		},
+		{
+			"filePath": "src/entities",
+			"group": "Default"
+		},
+		{
+			"filePath": "src/shared",
+			"group": "Default"
+		}
+	],
+	"favorites.sortOrder": "MANUAL"
 }

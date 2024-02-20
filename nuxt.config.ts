@@ -1,3 +1,4 @@
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import { defineNuxtConfig } from 'nuxt/config';
 import {
 	em,
@@ -8,8 +9,27 @@ import {
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: ['nuxt-mongoose'],
+	modules: [
+		'nuxt-mongoose',
+		(_options, nuxt) => {
+			nuxt.hooks.hook('vite:extendConfig', (config) => {
+				// eslint-disable-next-line
+				// @ts-ignore
+				config.plugins.push(vuetify({ autoImport: true }));
+			});
+		},
+	],
 	srcDir: 'src/',
+	build: {
+		transpile: ['vuetify'],
+	},
+	vite: {
+		vue: {
+			template: {
+				transformAssetUrls,
+			},
+		},
+	},
 	typescript: {
 		strict: true,
 	},
@@ -45,6 +65,8 @@ export default defineNuxtConfig({
 		assets: 'app/assets',
 		public: 'app/public',
 		middleware: 'app/providers/router/middleware',
+		plugins: 'app/plugins',
+		layouts: 'shared/ui/layouts',
 	},
 	components: [
 		{
