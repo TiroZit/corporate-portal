@@ -6,6 +6,7 @@ import Container from '@/shared/ui/Container';
 	<q-layout view="hHr LpR lFf">
 		<q-page-container>
 			<Container>
+				<slot name="sidebar" />
 				<q-page>
 					<slot />
 				</q-page>
