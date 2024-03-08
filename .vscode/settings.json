@@ -9,6 +9,7 @@
 		"source.fixAll": "explicit",
 		"source.organizeImports": "never"
 	},
+	"window.title": "${rootName}",
 	// Enable the ESlint flat config support
 	"eslint.experimental.useFlatConfig": true,
 	"eslint.validate": [
