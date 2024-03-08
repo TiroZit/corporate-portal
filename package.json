@@ -12,7 +12,9 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"lint": "eslint --fix . && stylelint --fix **/*.{sass,vue}"
+		"lint": "eslint --fix . && stylelint --fix **/*.{sass,vue}",
+		"pre-commit": "lint-staged --allow-empty --config lint-staged.config.js",
+		"prepare": "husky install"
 	},
 	"browserslist": [
 		">1%",
@@ -31,14 +33,16 @@
 	"devDependencies": {
 		"@antfu/eslint-config": "2.8.0",
 		"@conarti/eslint-plugin-feature-sliced": "1.0.5",
-		"@feature-sliced/eslint-config": "^0.1.0-beta.6",
+		"@feature-sliced/eslint-config": "0.1.0-beta.6",
 		"@nuxt/devtools": "1.0.8",
 		"@nuxt/devtools-ui-kit": "1.0.8",
 		"@nuxt/ui": "2.14.2",
 		"autoprefixer": "10.4.18",
 		"eslint": "8.57.0",
-		"eslint-plugin-boundaries": "^4.2.0",
-		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-boundaries": "4.2.0",
+		"eslint-plugin-import": "2.29.1",
+		"husky": "9.0.11",
+		"lint-staged": "15.2.2",
 		"nuxt": "3.10.3",
 		"nuxt-mongoose": "1.0.5",
 		"nuxt-quasar-ui": "2.0.7",
