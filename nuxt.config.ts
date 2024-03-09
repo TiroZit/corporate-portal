@@ -7,25 +7,19 @@ import {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	modules: [
+		'@nuxtjs/tailwindcss',
+		'shadcn-nuxt',
+		'@nuxtjs/color-mode',
+	],
+	colorMode: {
+		classSuffix: '',
+	},
+	shadcn: {
+		componentDir: './src/shared/ui',
+	},
 	ssr: false,
 	devtools: { enabled: true },
-	modules: ['nuxt-mongoose', 'nuxt-quasar-ui'],
-	quasar: {
-		config: {
-			dark: 'auto',
-			brand: {
-				'primary': '#512da8',
-				'secondary': '#311b92',
-				'accent': '#673ab7',
-				'positive': '#00bcd4',
-				'negative': '#e53935',
-				'info': '#1976d2',
-				'warning': '#ff5722',
-				'dark': '#000000',
-				'dark-page': '#111111',
-			},
-		},
-	},
 	srcDir: 'src/',
 	typescript: {
 		strict: true,
@@ -35,6 +29,7 @@ export default defineNuxtConfig({
 	},
 	css: [
 		'@/app/styles/_index.sass',
+		'@/app/assets/css/tailwind.css',
 	],
 	postcss: {
 		plugins: {
