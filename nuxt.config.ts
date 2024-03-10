@@ -1,3 +1,4 @@
+import { env } from 'node:process';
 import { defineNuxtConfig } from 'nuxt/config';
 import {
 	em,
@@ -31,6 +32,13 @@ export default defineNuxtConfig({
 		'@/app/styles/_index.sass',
 		'@/app/assets/css/tailwind.css',
 	],
+	runtimeConfig: {
+		app: {
+			APPWRITE_ENDPOINT: env.APPWRITE_ENDPOINT,
+			APPWRITE_ID: env.APPWRITE_ID,
+			APPWRITE_DB_ID: env.APPWRITE_DB_ID,
+		},
+	},
 	postcss: {
 		plugins: {
 			'autoprefixer': true,
