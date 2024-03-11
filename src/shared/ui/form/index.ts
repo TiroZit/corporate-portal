@@ -1,0 +1,10 @@
+export { Form as FormValidate, Field as FormField } from 'vee-validate';
+export { default as Form } from './Form.vue';
+export { default as FormItem } from './FormItem.vue';
+export { default as FormLabel } from './FormLabel.vue';
+export { default as FormControl } from './FormControl.vue';
+export { default as FormMessage } from './FormMessage.vue';
+export { default as FormDescription } from './FormDescription.vue';
+export { default as FormTitle } from './FormTitle.vue';
+export { default as FormFieldEmail } from './FormFieldEmail.vue';
+export { default as FormFieldPassword } from './FormFieldPassword.vue';
