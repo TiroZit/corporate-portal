@@ -1,6 +1,6 @@
 <template>
 	<slot name="header" />
-	<main>
+	<main class="flex flex-col min-h-dvh">
 		<slot />
 	</main>
 	<slot name="footer" />
