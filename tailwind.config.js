@@ -84,6 +84,9 @@ module.exports = {
 	},
 	plugins: [animate],
 	content: [
+		'./src/widgets/**/*.{ts,tsx,vue}',
+		'./src/features/**/*.{ts,tsx,vue}',
+		'./src/entities/**/*.{ts,tsx,vue}',
 		'./src/shared/**/*.{ts,tsx,vue}',
 	],
 };

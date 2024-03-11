@@ -28,9 +28,11 @@ export default defineNuxtConfig({
 	vue: {
 		propsDestructure: true,
 	},
+	tailwindcss: {
+		cssPath: './src/app/styles/_index.css',
+	},
 	css: [
-		'@/app/styles/_index.sass',
-		'@/app/assets/css/tailwind.css',
+		'@/app/styles/_index.css',
 	],
 	runtimeConfig: {
 		app: {
