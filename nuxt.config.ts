@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 		public: 'app/public',
 		middleware: 'app/providers/router/middleware',
 		plugins: 'app/plugins',
-		layouts: 'shared/ui/layouts',
+		layouts: 'shared/ui/layout',
 	},
 	components: [
 		{
