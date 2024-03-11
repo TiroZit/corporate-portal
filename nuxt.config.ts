@@ -72,32 +72,32 @@ export default defineNuxtConfig({
 	},
 	components: [
 		{
-			path: 'shared',
+			path: 'widgets',
 			extensions: ['.vue'],
-			prefix: 'Shared',
+			pathPrefix: false,
 		},
 		{
 			path: 'features',
 			extensions: ['.vue'],
-			prefix: 'Feature',
-		},
-		{
-			path: 'widgets',
-			extensions: ['.vue'],
-			prefix: 'Widget',
+			pathPrefix: false,
 		},
 		{
 			path: 'entities',
 			extensions: ['.vue'],
-			prefix: 'Entity',
+			pathPrefix: false,
+		},
+		{
+			path: 'shared',
+			extensions: ['.vue'],
+			pathPrefix: false,
 		},
 	],
 	imports: {
 		dirs: [
-			'shared/**/*.ts',
-			'features/**/*.ts',
 			'widgets/**/*.ts',
+			'features/**/*.ts',
 			'entities/**/*.ts',
+			'shared/**/*.ts',
 		],
 	},
 });
