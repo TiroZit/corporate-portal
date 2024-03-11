@@ -32,7 +32,7 @@
 		"appwrite": "14.0.0",
 		"class-variance-authority": "0.7.0",
 		"clsx": "2.1.0",
-		"radix-vue": "1.5.1",
+		"radix-vue": "1.5.2",
 		"tailwind-merge": "2.2.1",
 		"tailwindcss-animate": "1.0.7",
 		"vee-validate": "4.12.6",
