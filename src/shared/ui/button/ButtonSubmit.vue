@@ -13,7 +13,6 @@ withDefaults(defineProps<props>(), {
 <template>
 	<Button
 		:disabled="isDisabled || isSubmitting"
-		:is-submitting="isSubmitting"
 		type="submit"
 	>
 		<slot>

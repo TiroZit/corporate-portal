@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { Button } from '~/shared/ui/button';
+definePageMeta({
+	middleware: ['01-auth'],
+});
 </script>
 
 <template>

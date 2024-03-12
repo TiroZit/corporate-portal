@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'shadcn-nuxt',
 		'@nuxtjs/color-mode',
+		'@pinia/nuxt',
 	],
 	colorMode: {
 		classSuffix: '',
@@ -92,6 +93,14 @@ export default defineNuxtConfig({
 			pathPrefix: false,
 		},
 	],
+	pinia: {
+		storesDirs: [
+			'widgets/**/model/*.ts',
+			'features/**/model/*.ts',
+			'entities/**/model/*.ts',
+			'shared/**/model/*.ts',
+		],
+	},
 	imports: {
 		dirs: [
 			'widgets/**/*.ts',
