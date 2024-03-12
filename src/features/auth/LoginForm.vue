@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
+import { OAuthProvider } from 'appwrite';
 import { useForm } from 'vee-validate';
 import * as z from 'zod';
 
@@ -15,7 +16,6 @@ const { handleSubmit, isSubmitting } = useForm({ validationSchema });
 const onSubmit = handleSubmit(async (values) => {
 	try {
 		await account.createEmailPasswordSession(values.email, values.password);
-
 		toast({
 			title: 'Успех!',
 			description: 'Вы успешно вошли в систему',
@@ -41,6 +41,19 @@ const onSubmit = handleSubmit(async (values) => {
 		}
 	}
 });
+
+async function loginYandex() {
+	try {
+		await account.createOAuth2Session(OAuthProvider.Yandex, 'http://localhost:3000/');
+	}
+	catch (error: any) {
+		toast({
+			title: 'Ошибка!',
+			description: error.message,
+			variant: 'destructive',
+		});
+	}
+}
 </script>
 
 <template>
@@ -60,5 +73,6 @@ const onSubmit = handleSubmit(async (values) => {
 				<FormFieldPassword />
 			</template>
 		</Form>
+		<ButtonSignInYandex @click="loginYandex" />
 	</CardAuth>
 </template>

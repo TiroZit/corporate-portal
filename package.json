@@ -48,6 +48,7 @@
 		"@feature-sliced/eslint-config": "0.1.0-beta.6",
 		"@nuxt/devtools": "1.0.8",
 		"@nuxt/devtools-ui-kit": "1.0.8",
+		"@nuxt/image": "1.4.0",
 		"@nuxt/ui": "2.14.2",
 		"@nuxtjs/color-mode": "3.3.2",
 		"@nuxtjs/tailwindcss": "6.11.4",
