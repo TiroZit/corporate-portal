@@ -34,7 +34,7 @@
 		"class-variance-authority": "0.7.0",
 		"clsx": "2.1.0",
 		"pinia": "2.1.7",
-		"radix-vue": "1.5.1",
+		"radix-vue": "1.5.2",
 		"tailwind-merge": "2.2.1",
 		"tailwindcss-animate": "1.0.7",
 		"vee-validate": "4.12.6",
@@ -43,7 +43,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "2.8.0",
+		"@antfu/eslint-config": "2.8.1",
 		"@conarti/eslint-plugin-feature-sliced": "1.0.5",
 		"@feature-sliced/eslint-config": "0.1.0-beta.6",
 		"@nuxt/devtools": "1.0.8",
