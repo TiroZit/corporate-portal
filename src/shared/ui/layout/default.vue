@@ -1,7 +1,9 @@
 <template>
-	<slot name="header" />
-	<main class="flex flex-col min-h-dvh">
-		<slot />
-	</main>
-	<slot name="footer" />
+	<div class="flex flex-col min-h-dvh">
+		<slot name="header" />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<slot name="footer" />
+	</div>
 </template>
