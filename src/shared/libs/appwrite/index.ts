@@ -1,4 +1,4 @@
-import { Account, Client, Databases, OAuthProvider, Storage } from 'appwrite';
+import { Account, Client, Databases, Storage } from 'appwrite';
 
 const config = useRuntimeConfig();
 
