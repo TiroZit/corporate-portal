@@ -14,7 +14,7 @@ export const useAuth = defineStore('auth', () => {
 			.then((user: Models.Session) => {
 				current.value = user;
 			}).catch(() => {
-				navigateTo({ name: 'login' });
+				navigateTo('auth/login');
 			});
 	});
 
