@@ -43,28 +43,6 @@ export default defineNuxtConfig({
 			APPWRITE_DB_ID: env.APPWRITE_DB_ID,
 		},
 	},
-	postcss: {
-		plugins: {
-			'autoprefixer': true,
-			'postcss-pxtorem': {
-				propList: [
-					'*',
-				],
-				selectorBlackList: [
-					'line-height',
-					'letter-spacing',
-				],
-			},
-			'postcss-functions': {
-				functions: {
-					fluid,
-					em,
-					percent,
-				},
-			},
-			'postcss-sort-media-queries': true,
-		},
-	},
 	dir: {
 		assets: 'app/assets',
 		public: 'app/public',
