@@ -1,10 +1,5 @@
 import { env } from 'node:process';
 import { defineNuxtConfig } from 'nuxt/config';
-import {
-	em,
-	fluid,
-	percent,
-} from './config/postcss/functions';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

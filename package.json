@@ -12,7 +12,7 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"lint": "eslint --fix . && stylelint --fix **/*.{sass,vue}",
+		"lint": "eslint --fix",
 		"pre-commit": "lint-staged --allow-empty --config lint-staged.config.js",
 		"prepare": "husky install"
 	},
@@ -56,6 +56,8 @@
 		"nuxt": "3.10.3",
 		"nuxt-quasar-ui": "2.0.7",
 		"shadcn-nuxt": "0.10.0",
-		"sugarss": "4.0.1"
+		"sugarss": "4.0.1",
+		"typescript": "5.3.3",
+		"vue-tsc": "2.0.6"
 	}
 }
