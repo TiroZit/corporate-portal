@@ -55,7 +55,7 @@
 		"lint-staged": "15.2.2",
 		"nuxt": "3.10.3",
 		"nuxt-quasar-ui": "2.0.7",
-		"shadcn-nuxt": "0.10.0",
+		"shadcn-nuxt": "0.10.2",
 		"sugarss": "4.0.1",
 		"typescript": "5.3.3",
 		"vue-tsc": "2.0.6"
