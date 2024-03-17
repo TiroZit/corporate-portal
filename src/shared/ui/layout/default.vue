@@ -1,9 +1,8 @@
 <template>
-	<div class="flex flex-col min-h-dvh">
-		<slot name="header" />
+	<div class="flex min-h-dvh">
+		<slot name="sidebar" />
 		<main class="flex-grow">
 			<slot />
 		</main>
-		<slot name="footer" />
 	</div>
 </template>

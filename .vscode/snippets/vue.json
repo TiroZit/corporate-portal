@@ -8,10 +8,6 @@
 			"",
 			"<template>",
 			"</template>",
-			"",
-			"<style scoped lang=\"sass\">",
-			"",
-			"</style>",
 			""
 		],
 		"description": "Default vue sfc component"

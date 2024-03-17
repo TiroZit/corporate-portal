@@ -9,6 +9,7 @@ export default defineNuxtConfig({
 		'@pinia/nuxt',
 		'@nuxt/image',
 		'nuxt-appwrite',
+		'nuxt-icon',
 	],
 	ssr: false,
 	appwrite: {

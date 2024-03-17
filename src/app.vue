@@ -1,6 +1,15 @@
+<script setup lang="ts">
+import { Sidebar } from '@/widgets/Sidebar';
+</script>
+
 <template>
 	<NuxtLayout>
-		<NuxtPage />
+		<template #sidebar>
+			<Sidebar />
+		</template>
+		<template #default>
+			<NuxtPage />
+		</template>
 	</NuxtLayout>
 	<Toaster />
 </template>
