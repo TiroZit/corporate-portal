@@ -17,6 +17,10 @@ export default defineComponent({
 	setup() {
 		const id = useId();
 		provide(FORM_ITEM_INJECTION_KEY, id);
+
+		return {
+			cn,
+		};
 	},
 });
 </script>

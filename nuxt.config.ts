@@ -1,5 +1,4 @@
 import { env } from 'node:process';
-import { defineNuxtConfig } from 'nuxt/config';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -9,21 +8,18 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode',
 		'@pinia/nuxt',
 		'@nuxt/image',
+		'nuxt-appwrite',
 	],
+	ssr: false,
+	appwrite: {
+		endpoint: env.APPWRITE_ENDPOINT,
+		project: env.APPWRITE_ID,
+	},
 	colorMode: {
 		classSuffix: '',
 	},
 	shadcn: {
 		componentDir: './src/shared/ui',
-	},
-	ssr: false,
-	devtools: { enabled: true },
-	srcDir: 'src/',
-	typescript: {
-		strict: true,
-	},
-	vue: {
-		propsDestructure: true,
 	},
 	tailwindcss: {
 		cssPath: './src/app/styles/_index.css',
@@ -31,12 +27,11 @@ export default defineNuxtConfig({
 	css: [
 		'@/app/styles/_index.css',
 	],
-	runtimeConfig: {
-		app: {
-			APPWRITE_ENDPOINT: env.APPWRITE_ENDPOINT,
-			APPWRITE_ID: env.APPWRITE_ID,
-			APPWRITE_DB_ID: env.APPWRITE_DB_ID,
-		},
+	devtools: { enabled: true },
+	srcDir: 'src/',
+	typescript: {
+		strict: true,
+		// typeCheck: true,
 	},
 	dir: {
 		assets: 'app/assets',
@@ -45,42 +40,9 @@ export default defineNuxtConfig({
 		plugins: 'app/plugins',
 		layouts: 'shared/ui/layout',
 	},
-	components: [
-		{
-			path: 'widgets',
-			extensions: ['.vue'],
-			pathPrefix: false,
-		},
-		{
-			path: 'features',
-			extensions: ['.vue'],
-			pathPrefix: false,
-		},
-		{
-			path: 'entities',
-			extensions: ['.vue'],
-			pathPrefix: false,
-		},
-		{
-			path: 'shared',
-			extensions: ['.vue'],
-			pathPrefix: false,
-		},
-	],
-	pinia: {
-		storesDirs: [
-			'widgets/**/model/*.ts',
-			'features/**/model/*.ts',
-			'entities/**/model/*.ts',
-			'shared/**/model/*.ts',
-		],
-	},
+	components: [],
 	imports: {
-		dirs: [
-			'widgets/**/*.ts',
-			'features/**/*.ts',
-			'entities/**/*.ts',
-			'shared/**/*.ts',
-		],
+		dirs: [],
+		autoImport: true,
 	},
 });

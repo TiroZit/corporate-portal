@@ -1,4 +1,6 @@
-import type { Models } from 'appwrite';
+import type { Models } from 'nuxt-appwrite';
+
+const { account } = useAppwrite();
 
 export const useAuth = defineStore('auth', () => {
 	// STATE
@@ -11,7 +13,7 @@ export const useAuth = defineStore('auth', () => {
 
 	const getSession = computed(() => {
 		account.getSession('current')
-			.then((user: Models.Session) => {
+			.then((user) => {
 				current.value = user;
 			}).catch(() => {
 				navigateTo('auth/login');

@@ -5,7 +5,5 @@ definePageMeta({
 </script>
 
 <template>
-	<Button>
-		Кликни на меня
-	</Button>
+	<div />
 </template>
