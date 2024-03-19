@@ -30,7 +30,7 @@
 		"clsx": "2.1.0",
 		"nuxt-appwrite": "1.0.8",
 		"pinia": "2.1.7",
-		"radix-vue": "1.5.2",
+		"radix-vue": "1.5.3",
 		"shadcn-nuxt": "0.10.2",
 		"tailwind-merge": "2.2.1",
 		"tailwindcss-animate": "1.0.7",
