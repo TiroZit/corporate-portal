@@ -1,7 +1,7 @@
 <script lang="ts">
+import { useId } from 'radix-vue';
 import type { InjectionKey } from 'vue';
 import { defineComponent, provide } from 'vue';
-import { useId } from 'radix-vue';
 import { cn } from '@/shared/utils';
 
 // eslint-disable-next-line

@@ -1,6 +1,6 @@
 <template>
-	<div class="flex min-h-screen justify-center items-center">
-		<Card class="p-8 w-fit m-auto">
+	<div class="flex min-h-screen items-center justify-center">
+		<Card class="m-auto w-fit p-8">
 			<slot />
 		</Card>
 	</div>

@@ -7,7 +7,7 @@ const miniMode = ref(true);
 <template>
 	<aside
 		:class="{ 'w-48': !miniMode, 'w-16': miniMode }"
-		class="transition-[width] border-e bg-card text-card-foreground shadow p-4 transition-width"
+		class="transition-width border-e bg-card p-4 text-card-foreground shadow transition-[width]"
 	>
 		<nav class="flex flex-col gap-6" :data-state="miniMode ? 'collapsed' : 'expanded'">
 			<Logo v-show="!miniMode" @click="miniMode = !miniMode" />
