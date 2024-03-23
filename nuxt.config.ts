@@ -1,5 +1,3 @@
-import { env } from 'node:process';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: [
@@ -8,14 +6,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode',
 		'@pinia/nuxt',
 		'@nuxt/image',
-		'nuxt-appwrite',
+		'@nuxtjs/supabase',
 		'nuxt-icon',
 	],
 	ssr: false,
-	appwrite: {
-		endpoint: env.APPWRITE_ENDPOINT,
-		project: env.APPWRITE_ID,
-	},
 	colorMode: {
 		classSuffix: '',
 	},
@@ -32,7 +26,6 @@ export default defineNuxtConfig({
 	srcDir: 'src/',
 	typescript: {
 		strict: true,
-		// typeCheck: true,
 	},
 	dir: {
 		assets: 'app/assets',
