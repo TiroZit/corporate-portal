@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@antfu/eslint-config": "2.9.1",
 		"@conarti/eslint-plugin-feature-sliced": "1.0.5",
-		"@nuxt/devtools": "1.1.4",
+		"@nuxt/devtools": "1.1.5",
 		"@nuxt/image": "1.4.0",
 		"@nuxt/ui": "2.15.0",
 		"@nuxtjs/color-mode": "3.3.3",
