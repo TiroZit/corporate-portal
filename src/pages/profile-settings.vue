@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { CardProfileMain } from '~/entities/profile';
 </script>
 
 <template>
@@ -11,7 +10,7 @@ import { CardProfileMain } from '~/entities/profile';
 		email="qKuZB@example.com"
 	>
 		<template #logout>
-			<ButtonLogout2 />
+			<ButtonLogout />
 		</template>
 
 		<template #socials />

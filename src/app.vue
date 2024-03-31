@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { Sidebar } from '@/widgets/Sidebar';
-</script>
-
 <template>
 	<NuxtLayout>
 		<template #sidebar>

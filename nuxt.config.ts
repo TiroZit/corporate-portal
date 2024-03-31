@@ -34,9 +34,30 @@ export default defineNuxtConfig({
 		plugins: 'app/plugins',
 		layouts: 'shared/ui/layout',
 	},
-	components: [],
-	imports: {
-		dirs: [],
-		autoImport: true,
+	components: [
+		{
+			path: 'widgets',
+			pathPrefix: false,
+		},
+		{
+			path: 'features',
+			pathPrefix: false,
+		},
+		{
+			path: 'entities',
+			pathPrefix: false,
+		},
+		{
+			path: 'shared',
+			pathPrefix: false,
+		},
+	],
+	pinia: {
+		storesDirs: [
+			'./src/widgets/**/model/*.ts',
+			'./src/features/**/model/*.ts',
+			'./src/entities/**/model/*.ts',
+			'./src/shared/**/model/*.ts',
+		],
 	},
 });

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { Avatar, AvatarFallback, AvatarImage } from '~/shared/ui/avatar';
-import { Logo, LogoMini } from '~/shared/ui/logo';
-
 const miniMode = ref(true);
 </script>
 
