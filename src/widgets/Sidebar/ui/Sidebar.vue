@@ -27,7 +27,7 @@ const miniMode = ref(true);
 
 			<ul class="mt-auto">
 				<li>
-					<NuxtLink to="/settings">
+					<NuxtLink to="/profile-settings">
 						<Avatar>
 							<AvatarImage
 								src="https://github.com/shadcn.png"
