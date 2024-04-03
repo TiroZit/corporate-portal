@@ -37,11 +37,11 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "2.11.6",
+		"@antfu/eslint-config": "2.12.1",
 		"@conarti/eslint-plugin-feature-sliced": "1.0.5",
 		"@nuxt/devtools": "1.1.5",
-		"@nuxt/image": "1.4.0",
-		"@nuxt/ui": "2.15.0",
+		"@nuxt/image": "1.5.0",
+		"@nuxt/ui": "2.15.1",
 		"@nuxtjs/color-mode": "3.3.3",
 		"@nuxtjs/supabase": "^1.2.0",
 		"@nuxtjs/tailwindcss": "6.11.4",
