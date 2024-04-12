@@ -5,9 +5,7 @@ const { data: profile, pending } = await postProfile();
 </script>
 
 <template>
-	<div v-if="pending">
-		Loading...
-	</div>
+	<Skeleton v-if="pending" class="h-48 w-full rounded-xl" />
 	<div v-else>
 		<CardProfileMain
 			:avatar="profile?.avatar_url"

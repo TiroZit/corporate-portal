@@ -3,7 +3,7 @@ import { postProfile } from '~/entities/profile/api/apiProfile';
 
 const miniMode = ref(true);
 
-const { data: profile } = await postProfile();
+const { data: profile, pending } = await postProfile();
 </script>
 
 <template>
@@ -28,7 +28,11 @@ const { data: profile } = await postProfile();
 
 			<ul class="mt-auto">
 				<li>
-					<NuxtLink to="/profile-settings">
+					<Skeleton
+						v-if="pending"
+						class="size-8 rounded-full"
+					/>
+					<NuxtLink v-else to="/profile-settings">
 						<Avatar>
 							<AvatarImage
 								:src="profile?.avatar_url || ''"
