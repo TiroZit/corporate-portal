@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { postProfile } from '~/entities/profile/api/apiProfile';
+
 const miniMode = ref(true);
+
+const { data: profile } = await postProfile();
 </script>
 
 <template>
@@ -27,10 +31,9 @@ const miniMode = ref(true);
 					<NuxtLink to="/profile-settings">
 						<Avatar>
 							<AvatarImage
-								src="https://github.com/shadcn.png"
-								alt="Shadcn"
+								:src="profile?.avatar_url || ''"
 							/>
-							<AvatarFallback>SC</AvatarFallback>
+							<AvatarFallback>{{ profile?.first_name.charAt(0) }}</AvatarFallback>
 						</Avatar>
 					</NuxtLink>
 				</li>

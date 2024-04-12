@@ -2,11 +2,11 @@
 import { Divider } from '@/shared/ui/divider';
 
 export interface ICardSettingsMainProps {
-	avatar: string;
-	name: string;
-	position: string;
-	tel: string;
-	email: string;
+	avatar?: string;
+	name?: string;
+	position?: string;
+	tel?: string;
+	email?: string;
 }
 
 defineProps<ICardSettingsMainProps>();
@@ -15,8 +15,8 @@ defineProps<ICardSettingsMainProps>();
 <template>
 	<Card class="flex gap-8 p-8">
 		<Avatar size="lg">
-			<AvatarImage :src="avatar" />
-			<AvatarFallback>{{ name }}</AvatarFallback>
+			<AvatarImage :src="avatar || ''" />
+			<AvatarFallback>{{ name?.charAt(0) }}</AvatarFallback>
 		</Avatar>
 
 		<div class="flex grow flex-col gap-5">
