@@ -1,11 +1,10 @@
-import apiBase from '@/shared/api/base/apiBase';
 import type { IProfile } from '../model/typesProfile';
 
 export async function postProfile() {
 	const client = useSupabaseClient();
 	const user = useSupabaseUser();
 
-	return await useLazyAsyncData<IProfile>('tasks', async () => {
+	return await useLazyAsyncData<IProfile>('profile', async () => {
 		const { data } = await client
 			.from('profiles')
 			.select('*')
