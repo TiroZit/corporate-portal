@@ -8,9 +8,9 @@ defineProps<ICardSettingsProps>();
 
 <template>
 	<Card class="m-auto flex w-fit gap-8 p-8">
-		<div class="basis-96 text-xl font-semibold">
+		<h2 class="basis-96 text-xl font-semibold">
 			{{ title }}
-		</div>
+		</h2>
 
 		<slot />
 	</Card>
