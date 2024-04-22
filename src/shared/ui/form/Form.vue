@@ -3,6 +3,7 @@ interface props {
 	handlerSubmit: (e?: Event | undefined) => Promise<Promise<void> | undefined>;
 	buttonSubmitText?: string;
 	isSubmitting?: boolean;
+	classFields?: string;
 }
 
 const { handlerSubmit } = defineProps<props>();
@@ -14,7 +15,7 @@ const { handlerSubmit } = defineProps<props>();
 			<slot name="title" />
 		</FormTitle>
 
-		<div class="flex flex-col gap-4">
+		<div class="flex flex-col gap-4" :class="classFields">
 			<slot name="fields" />
 		</div>
 
