@@ -4,9 +4,9 @@ export async function postProfile() {
 	const client = useSupabaseClient<IProfile>();
 	const user = useSupabaseUser();
 
-	return await useLazyAsyncData<IProfile>('profile', async () => {
+	return useLazyAsyncData<IProfile>('profile', async () => {
 		const { data } = await client
-			.from('profiles')
+			.from('users')
 			.select('*')
 			.eq('id', user.value?.id || '');
 
@@ -25,8 +25,8 @@ export async function updateProfile(data: IProfilePersonal) {
 	const client = useSupabaseClient<IProfilePersonal>();
 	const user = useSupabaseUser();
 
-	return await client
-		.from('profiles')
+	return client
+		.from('users')
 		.update(data)
 		.eq('id', user.value?.id || '')
 		.select();

@@ -11,6 +11,7 @@ const validationSchema = toTypedSchema(z.object({
 
 const { toast } = useToast();
 const { auth } = useSupabaseClient();
+const session = useSupabaseSession();
 
 const { handleSubmit, isSubmitting } = useForm({ validationSchema });
 
@@ -34,6 +35,7 @@ const onSubmit = handleSubmit(async (values) => {
 		}
 	}
 	else {
+		session.value = (await auth.getSession()).data.session;
 		toast({
 			title: 'Успех!',
 			description: 'Вы успешно вошли',
