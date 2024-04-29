@@ -15,12 +15,21 @@ const { data: profile, pending } = await postProfile();
 			<!-- <Logo @click="miniMode = !miniMode" /> -->
 			<LogoMini @click="miniMode = !miniMode" />
 
-			<ul>
-				<li>
+			<ul class="flex flex-col gap-4">
+				<li title="Главная">
 					<NuxtLink to="/" class="flex items-center gap-2">
-						<Icon name="uil:github" size="32" class="shrink-0" />
+						<Icon name="ic:baseline-maps-home-work" size="32" class="shrink-0" />
 						<span class="text-sm group-data-[state=collapsed]:hidden">
-							Home
+							Главная
+						</span>
+					</NuxtLink>
+				</li>
+
+				<li title="Сотрудники">
+					<NuxtLink to="/employees" class="flex items-center gap-2">
+						<Icon name="ic:outline-people-outline" size="32" class="shrink-0" />
+						<span class="text-sm group-data-[state=collapsed]:hidden">
+							Сотрудники
 						</span>
 					</NuxtLink>
 				</li>
