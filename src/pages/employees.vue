@@ -10,6 +10,10 @@
 			</div>
 		</PageHeader>
 
-		<EmployeesList />
+		<EmployeesList>
+			<template #actions="actionsProps">
+				<DeleteEmployee :id="actionsProps.employee.id || ''" />
+			</template>
+		</EmployeesList>
 	</div>
 </template>

@@ -11,7 +11,7 @@ const { handlerSubmit } = defineProps<props>();
 
 <template>
 	<form class="flex flex-col items-start gap-8" @submit="handlerSubmit">
-		<FormTitle>
+		<FormTitle v-if="$slots.title">
 			<slot name="title" />
 		</FormTitle>
 

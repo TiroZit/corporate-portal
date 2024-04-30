@@ -80,10 +80,6 @@ const onSubmit = handleSubmit(async (values) => {
 				:handler-submit="onSubmit"
 				:is-submitting="isSubmitting"
 			>
-				<!-- <template #title>
-					Добавить сотрудника
-				</template> -->
-
 				<template #fields>
 					<FormFieldText
 						name="last_name"

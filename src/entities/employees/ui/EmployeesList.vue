@@ -50,6 +50,10 @@ onBeforeMount(() => {
 				<TableCell>
 					{{ employee.position }}
 				</TableCell>
+
+				<TableCell>
+					<slot :employee name="actions" />
+				</TableCell>
 			</TableRow>
 		</TableBody>
 	</Table>
