@@ -12,7 +12,10 @@
 
 		<EmployeesList>
 			<template #actions="actionsProps">
-				<DeleteEmployee :id="actionsProps.employee.id || ''" />
+				<div class="flex gap-3">
+					<EditEmployee :employee="actionsProps.employee" />
+					<DeleteEmployee :id="actionsProps.employee.id || ''" />
+				</div>
 			</template>
 		</EmployeesList>
 	</div>
