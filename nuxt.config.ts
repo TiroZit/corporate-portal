@@ -1,3 +1,5 @@
+import { env } from 'node:process';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: [
@@ -59,5 +61,10 @@ export default defineNuxtConfig({
 			'./src/entities/**/model/*.ts',
 			'./src/shared/**/model/*.ts',
 		],
+	},
+	runtimeConfig: {
+		app: {
+			supabaseServiceKey: env.SUPABASE_SERVICE_KEY,
+		},
 	},
 });

@@ -1,19 +1,19 @@
 export interface IProfile {
-	id: string;
+	id?: string;
 	email: string;
-	phone: string;
+	phone?: string;
 	position: string;
-	avatar_url: string;
+	avatar_url?: string;
 	first_name: string;
 	last_name: string;
 	middle_name: string;
 	birthday: string;
-	about_me: string;
-	intersts_competence: string;
+	about_me?: string;
+	intersts_competence?: string;
 	division: string;
-	telegram: string;
-	whatsapp: string;
-	viber: string;
+	telegram?: string;
+	whatsapp?: string;
+	viber?: string;
 }
 
 export interface IProfilePersonal extends Pick<

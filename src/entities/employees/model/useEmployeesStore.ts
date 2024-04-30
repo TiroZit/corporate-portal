@@ -12,5 +12,9 @@ export const useEmployeesStore = defineStore('employees', {
 				this.items = data;
 			});
 		},
+
+		addEmployee(data: IProfile) {
+			this.items.push(data);
+		},
 	},
 });

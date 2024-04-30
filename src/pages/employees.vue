@@ -6,9 +6,7 @@
 	<div class="flex flex-col gap-4">
 		<PageHeader title="Сотрудники">
 			<div class="flex justify-between">
-				<Button>
-					Добавить сотрудника
-				</Button>
+				<AddNewEmployee />
 			</div>
 		</PageHeader>
 

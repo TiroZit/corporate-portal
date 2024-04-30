@@ -29,7 +29,7 @@ onBeforeMount(() => {
 				<TableCell>
 					<Avatar>
 						<AvatarImage
-							:src="employee.avatar_url"
+							:src="employee.avatar_url || ''"
 						/>
 						<AvatarFallback>{{ employee.first_name.charAt(0) }}</AvatarFallback>
 					</Avatar>
