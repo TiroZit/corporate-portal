@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxtjs/supabase',
 		'nuxt-icon',
+		'@vueuse/nuxt',
 	],
 	ssr: false,
 	colorMode: {

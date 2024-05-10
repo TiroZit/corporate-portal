@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import BaseSearch from '~/shared/ui/search/BaseSearch.vue';
 
+const { searchEmployee } = useSearchEmployee();
 </script>
 
 <template>
 	<div class="flex flex-col gap-4">
 		<PageHeader title="Сотрудники">
 			<div class="flex justify-between">
+				<BaseSearch :search="searchEmployee" />
 				<AddNewEmployee />
 			</div>
 		</PageHeader>
