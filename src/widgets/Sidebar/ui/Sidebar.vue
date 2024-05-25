@@ -33,6 +33,15 @@ const { data: profile, pending } = await postProfile();
 						</span>
 					</NuxtLink>
 				</li>
+
+				<li title="Статьи">
+					<NuxtLink to="/articles" class="flex items-center gap-2">
+						<Icon name="ic:baseline-article" size="32" class="shrink-0" />
+						<span class="text-sm group-data-[state=collapsed]:hidden">
+							Статьи
+						</span>
+					</NuxtLink>
+				</li>
 			</ul>
 
 			<ul class="mt-auto">
