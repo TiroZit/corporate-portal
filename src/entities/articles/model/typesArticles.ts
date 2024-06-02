@@ -6,11 +6,14 @@ export interface IArticleAuthor {
 }
 
 export interface IArticle {
-	id: string;
+	id: number;
 	title: string;
 	content: string;
+	created_at: string;
 	author: IArticleAuthor;
 }
+
+export type IArticleContent = Pick<IArticle, 'content'>;
 
 export interface IArticlesState {
 	items: IArticle[];

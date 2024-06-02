@@ -13,6 +13,13 @@ export const useArticlesStore = defineStore('articles', {
 			});
 		},
 
+		getArticle(id: number) {
+			if (this.items.length === 0)
+				this.loadArticles();
+
+			return this.items.find(item => item.id === id);
+		},
+
 		addArticle(data: IArticle) {
 			this.items.push(data);
 		},
