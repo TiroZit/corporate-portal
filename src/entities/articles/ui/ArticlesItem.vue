@@ -16,7 +16,7 @@ defineProps<IArticlesItemProps>();
 			</NuxtLink>
 		</div>
 
-		<div class="flex items-center gap-3">
+		<!-- <div class="flex items-center gap-3">
 			<Avatar>
 				<AvatarImage
 					:src="article?.author.avatar_url || ''"
@@ -24,6 +24,6 @@ defineProps<IArticlesItemProps>();
 				<AvatarFallback>{{ article?.author.first_name.charAt(0) }}</AvatarFallback>
 			</Avatar>
 			{{ article?.author.first_name }}
-		</div>
+		</div> -->
 	</Card>
 </template>
