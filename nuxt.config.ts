@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		'nuxt-icon',
 		'@vueuse/nuxt',
 	],
-	ssr: false,
+	ssr: true,
 	colorMode: {
 		classSuffix: '',
 	},
