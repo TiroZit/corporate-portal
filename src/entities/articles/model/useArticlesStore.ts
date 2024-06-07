@@ -1,4 +1,4 @@
-import { getArticles } from '../api/apiArticles';
+import { createArticle, getArticles } from '../api/apiArticles';
 import type { IArticle, IArticlesState } from './typesArticles';
 
 export const useArticlesStore = defineStore('articles', {
@@ -21,7 +21,10 @@ export const useArticlesStore = defineStore('articles', {
 		},
 
 		addArticle(data: IArticle) {
-			this.items.push(data);
+			// this.items.push(data);
+
+			createArticle(data);
+			this.loadArticles();
 		},
 	},
 });

@@ -29,3 +29,12 @@ export async function updateArticle(data: IArticleContent, id: string) {
 		.eq('id', id)
 		.select();
 }
+
+export async function createArticle(data: IArticleContent) {
+	const client = useSupabaseClient<IArticleContent>();
+
+	return client
+		.from('wiki_articles')
+		.insert([data])
+		.select();
+}

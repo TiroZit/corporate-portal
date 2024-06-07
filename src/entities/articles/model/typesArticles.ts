@@ -6,11 +6,11 @@ export interface IArticleAuthor {
 }
 
 export interface IArticle {
-	id: number;
+	id?: number;
 	title: string;
-	content: string;
-	created_at: string;
-	author: IArticleAuthor;
+	content?: string;
+	created_at?: string;
+	author?: IArticleAuthor;
 }
 
 export type IArticleContent = Pick<IArticle, 'content'>;
