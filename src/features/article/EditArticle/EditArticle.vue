@@ -135,3 +135,9 @@ export default {
 
 	<div id="hooliEditor" />
 </template>
+
+<style lang="css">
+.ce-header {
+	font-size: 32px;
+}
+</style>

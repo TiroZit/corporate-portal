@@ -9,7 +9,7 @@ const { data: profile, pending } = await postProfile();
 <template>
 	<aside
 		:class="{ 'w-48': !miniMode, 'w-16': miniMode }"
-		class="transition-width border-e bg-card p-4 text-card-foreground shadow transition-[width]"
+		class="transition-width fixed inset-y-0 border-e bg-card p-4 text-card-foreground shadow transition-[width]"
 	>
 		<nav class="group flex h-full flex-col gap-6" :data-state="miniMode ? 'collapsed' : 'expanded'">
 			<!-- <Logo @click="miniMode = !miniMode" /> -->
