@@ -16,8 +16,8 @@ const article = computed(() => getArticle(Number(id)));
 		Дата публикации: {{ moment(article?.created_at).locale('ru').format('LLL') }}
 	</div>
 
-	<div class="flex gap-3">
-		{{ }}
+	<div class="mt-4 flex gap-3">
+		<AddToFavorite :id="id as string" />
 	</div>
 
 	<EditArticle

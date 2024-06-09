@@ -42,6 +42,15 @@ const { data: profile, pending } = await postProfile();
 						</span>
 					</NuxtLink>
 				</li>
+
+				<li title="Избранные статьи">
+					<NuxtLink to="/articles/favorites" class="flex items-center gap-2">
+						<Icon name="ic:round-collections-bookmark" size="32" class="shrink-0" />
+						<span class="text-sm group-data-[state=collapsed]:hidden">
+							Избранные статьи
+						</span>
+					</NuxtLink>
+				</li>
 			</ul>
 
 			<ul class="mt-auto">

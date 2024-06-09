@@ -38,3 +38,25 @@ export async function createArticle(data: IArticleContent) {
 		.insert([data])
 		.select();
 }
+
+export async function getFavoriteArticles(callback: (data: IArticle[]) => void) {
+	const client = useSupabaseClient<IArticle[]>();
+	const user = useSupabaseUser();
+
+	const { data } = await client
+		.from('wiki_articles_favorites')
+		.select(
+			`
+				id,
+				article (id, title, content)
+			`,
+		)
+		.eq('id', user.value?.id || '');
+
+	if (data === null || data.length === 0)
+		return;
+
+	// eslint-disable-next-line
+	// @ts-expect-error
+	callback(data);
+}

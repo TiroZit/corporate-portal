@@ -17,4 +17,5 @@ export type IArticleContent = Pick<IArticle, 'content'>;
 
 export interface IArticlesState {
 	items: IArticle[];
+	favorites: IArticle[];
 }
