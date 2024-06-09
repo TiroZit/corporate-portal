@@ -9,7 +9,7 @@ const article = computed(() => getArticle(Number(id)));
 </script>
 
 <template>
-	<div class="mb-8 text-6xl font-semibold">
+	<div class="mb-8 max-w-5xl text-6xl font-semibold">
 		{{ article?.title }}
 	</div>
 	<div class="">

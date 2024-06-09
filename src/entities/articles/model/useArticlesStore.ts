@@ -1,4 +1,4 @@
-import { createArticle, getArticles, getFavoriteArticles } from '../api/apiArticles';
+import { createArticle, getArticles } from '../api/apiArticles';
 import type { IArticle, IArticlesState } from './typesArticles';
 
 export const useArticlesStore = defineStore('articles', {
