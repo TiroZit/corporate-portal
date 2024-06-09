@@ -43,30 +43,30 @@ const onSubmit = handleSubmit(async (values) => {
 	}
 });
 
-async function loginYandex() {
-	const { error } = await auth.signInWithOAuth({
-		provider: 'github',
-		options: {
-			redirectTo: 'http://localhost:3000',
-		},
-	});
+// async function loginYandex() {
+// 	const { error } = await auth.signInWithOAuth({
+// 		provider: 'github',
+// 		options: {
+// 			redirectTo: 'http://localhost:3000',
+// 		},
+// 	});
 
-	if (error) {
-		toast({
-			title: 'Ошибка!',
-			description: error.message,
-			variant: 'destructive',
-		});
-	}
-	else {
-		toast({
-			title: 'Успех!',
-			description: 'Вы успешно вошли',
-			variant: 'success',
-		});
-		await navigateTo('/');
-	}
-}
+// 	if (error) {
+// 		toast({
+// 			title: 'Ошибка!',
+// 			description: error.message,
+// 			variant: 'destructive',
+// 		});
+// 	}
+// 	else {
+// 		toast({
+// 			title: 'Успех!',
+// 			description: 'Вы успешно вошли',
+// 			variant: 'success',
+// 		});
+// 		await navigateTo('/');
+// 	}
+// }
 </script>
 
 <template>
@@ -86,6 +86,6 @@ async function loginYandex() {
 				<FormFieldPassword />
 			</template>
 		</Form>
-		<ButtonSignInYandex @click="loginYandex" />
+		<!-- <ButtonSignInYandex @click="loginYandex" /> -->
 	</CardAuth>
 </template>
