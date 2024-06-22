@@ -137,7 +137,141 @@ export default {
 </template>
 
 <style lang="css">
+/* Общие стили для EditorJS */
+.codex-editor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  color: #333;
+}
+
+/* Стили для параграфов */
+.ce-paragraph.cdx-block {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Стили для чек-листа */
+.cdx-checklist {
+  margin: 20px 0;
+}
+
+.cdx-checklist__item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.cdx-checklist__item-checkbox {
+  margin-right: 10px;
+}
+
+.cdx-checklist__item-text {
+  font-size: 1.2em;
+}
+
+.cdx-checklist__item-checkbox-check svg {
+  fill: #2c3e50;
+}
+
+/* Стили для делимитеров */
+.ce-delimiter.cdx-block {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ce-delimiter.cdx-block hr {
+  border: none;
+  border-top: 2px dashed #ccc;
+}
+
+/* Стили для предупреждений */
+.cdx-warning {
+  background-color: #fce4e4;
+  padding: 20px;
+  border-left: 5px solid #e74c3c;
+  margin: 20px 0;
+}
+
+.cdx-warning__title {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.cdx-warning__message {
+  color: #c0392b;
+}
+
+/* Стили для вложенных списков */
+.cdx-nested-list {
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.cdx-nested-list__item {
+  margin-bottom: 10px;
+}
+
+.cdx-nested-list__item-content {
+  font-size: 1.2em;
+}
+
+/* Стили для цитат */
+.cdx-quote {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #2c3e50;
+  font-style: italic;
+  color: #555;
+}
+
+.cdx-quote__text {
+  margin-bottom: 10px;
+}
+
+.cdx-quote__caption {
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Стили для кода */
+.ce-code {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.ce-code__textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: monospace;
+  resize: none;
+}
+
+/* Стили для контейнера редактора */
+.codex-editor__redactor {
+  padding-bottom: 300px;
+}
+
+/* Стили для блока */
+/* .ce-block {
+  margin-bottom: 20px;
+}
+
+.ce-block__content {
+  padding: 10px 0;
+} */
+
 .ce-header {
-	font-size: 32px;
+	font-size: 36px;
 }
 </style>
