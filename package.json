@@ -58,7 +58,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@antfu/eslint-config": "2.13.3",
+		"@antfu/eslint-config": "2.27.3",
 		"@conarti/eslint-plugin-feature-sliced": "1.0.5",
 		"@nuxt/devtools": "1.1.5",
 		"@nuxt/image": "1.5.0",
